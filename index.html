@@ -64,7 +64,7 @@
          span.myname {
          font-weight: bold;
          font-size: 52px;
-         color: #555;
+         color: lightgray;
          font-family: cursive;
          }
          .reveal pre code, pre {
@@ -216,9 +216,7 @@
             <section>
                <h2>Requirements</h2>
                <ul>
-                  <li>Move out of Confluence exporting workflow</li>
                   <li>Publish to modern-looking website</li>
-                  <li>Separate outputs by audience (Java, PHP, C++)</li>
                   <li>Re-use content across multiple outputs</li>
                   <li>Maintain versions for each release</li>
                   <li>Handle authentication via Salesforce</li>
@@ -229,10 +227,10 @@
                <h2>Solutions</h2>
                <ul>
                   <li>Use Bootstrap to develop modern-looking theme</li>
-                  <li>Store and manage content in company's VCS</li>
                   <li>Separate config files for different outputs</li>
-                  <li>Use Prince XML for PDF output</li>
+                  <li>Store and manage content in company's VCS</li>
                   <li>Upload output into Salesforce for authentication</li>
+                  <li>Use Prince XML for PDF output</li>
                </ul>
             </section>
             <section>
@@ -245,10 +243,10 @@
                   <li>Spent a lot of time developing tooling</li>
                   <li>No continuous delivery implementation</li>
                   <li>Salesforce authentication required tedious upload</li>
-                  <li>Convenience for business drove tedious doc process</li>
                   <li>File accumulation exponential with versioning</li>
                   <li>3rd-party site (Beegit) for content review didn't work</li>
                </ul>
+               <p class="fragment" style="color: orange"><small>Should convenience for business (e.g., Salesforce authentication) mandate a tedious doc process?</small></p>
             </section>
          </section>
          <section>
@@ -264,9 +262,8 @@
             <ul>
                <li>Publish to old system while also publishing to new</li>
                <li>Integrate into existing site without header/footer </li>
-               <li>Go through engineering to publish to tier 1 server</li>
+               <li>Go through engineering to publish to site</li>
                <li>Whitelist content for preview with beta partners</li>
-               <li>Make system both simple and robust</li>
                <li>Enable engineers to author automously</li>
                <li>Support localization (JA, ZH, DE)</li>
             </ul>
@@ -276,13 +273,17 @@
             <ul>
                <li>Develop 2 layouts -- one for old sys, one for new</li>
                <li>Store links as variables determined by config</li>
-               <li>Use existing Git infrastructure to manage content</li>
-               <li>Involve engineering to build publishing pipeline</li>
+               <li>Work w/ engineers for publishing pipeline from git</li>
                <li>Group content into two main repos (by team)</li>
+               <li>Build custom scripts to check metadata</li>
                <li>Develop loc process to output/re-incorporate HTML</li>
-               <li>Built custom scripts to check metadata</li>
             </ul>
          </section>
+         <section>
+           <h2>Jekyll theme I built</h2>
+           <a href="https://github.com/amzn/jekyll-doc-project"><img src="media/rasters/jekylldocproject.png"/></a>
+         </section>
+
 
          <section>
            <h2>Solution for Appstore docs</h2>
@@ -295,9 +296,7 @@
                <li>Didn't build-in support for biz funding for platform</li>
                <li>Localization workflow cumbersome</li>
                <li>Two-repo architecture requires manual copy/paste</li>
-               <li>Had to write 25+ pages of internal documentation</li>
                <li>Jekyll build-time slow; maybe use Hugo instead</li>
-               <li>No fool-proofing against disaster scenarios</li>
             </ul>
          </section>
        </section>
@@ -306,12 +305,8 @@
             <ul>
                <li>Insist on 3rd-party tooling, hosting, deployment</li>
                <li>"Build tools yourself on own time" == not good</li>
-               <li>Engineers don't write much regardless of tooling</li>
-               <li>Keeping it simple means creating complex backend</li>
                <li>Tools are incredible flexible if you have skillz</li>
-               <li>Solutions for search, localization, and PDF are hacks</li>
-               <li>Web dev will outpace tech comm tooling</li>
-               <li>Freedom to code the exact solution you want</li>
+               <li>Freedom to code exact solution is unparalleled</li>
                <li>Still very early in this space</li>
             </ul>
          </section>
@@ -332,9 +327,13 @@
             <h2>Social coding is empowering</h2>
             <img src="media/vectors/innovation_github.svg"/>
          </section>
+         <section>
+           <h2>429 forks of my doc theme</h2>
+           <a href="https://github.com/tomjoht/documentation-theme-jekyll"><img src="media/rasters/githubforks.png"/></a>
+         </section>
        </section>
          <section>
-            <h2>Discussion / questions</h2>
+            <h2>Discussion / questions?</h2>
             <img src="media/vectors/questions-01.svg"/>
          </section>
          <section>
@@ -349,7 +348,7 @@
          <section>
             <h3>Solution: Bootstrap</h3>
             <img src="media/rasters/bootstrap.png"/>
-            <p>Or have your UX team build it</p>
+            <p><small>Or have your UX team build it</small></p>
          </section>
          <section data-background="media/vectors/docsascode_bg-challenge.svg">
             <h2>Content re-use?</h2>
@@ -421,7 +420,7 @@ jekyll build --config config_analysts.yml --destination ../outputs/analysts
     output: web, pdf
 </code></pre>
 
-<p>And <a href="https://github.com/tefra/navgoco">Navgoco jQuery component</a></p>
+<p><small>And <a href="https://github.com/tefra/navgoco">Navgoco jQuery component</a></small></p>
             </ul>
             <div class="clear"></div>
          </section>
@@ -458,11 +457,11 @@ jekyll build --config config_analysts.yml --destination ../outputs/analysts
             <section>
                <h3>Solution: Prince XML</h3>
                <img src="media/rasters/princexml.png"/>
-               <p>Or live without it.</p>
+               <p><small>Or live without it.</small></p>
 
             </section>
             <section data-background="media/vectors/docsascode_bg-challenge.svg">
-               <h2>Version control workflows?</h2>
+               <h2>Git workflows?</h2>
                <img src="media/vectors/docsascode_git.svg"/>
             </section>
             <section>
@@ -478,7 +477,7 @@ jekyll build --config config_analysts.yml --destination ../outputs/analysts
             <section>
                <h3>Solution: 3rd-party service</h3>
                <a href="https://www.algolia.com"><img src="media/rasters/algolia.png"/></a>
-               <p>Or have engineering custom-build it</p>
+               <p><small>Or have engineering custom-build it</small></p>
             </section>
             <section data-background="media/vectors/docsascode_bg-challenge.svg">
                <h2>Translation?</h2>
@@ -487,6 +486,7 @@ jekyll build --config config_analysts.yml --destination ../outputs/analysts
             <section>
                <h3>Containers for HTML</h3>
                <img src="media/vectors/docsascode_locsolution.svg"/>
+               <p><small>Output page body to HTML, reincorporate body. Maintain frontmatter.</small></p>
 
 
             </section>
@@ -497,7 +497,7 @@ jekyll build --config config_analysts.yml --destination ../outputs/analysts
             <section>
                <h3>Solution: 3rd-party service</h3>
                <a href="https://www.onelogin.com/"><img src="media/rasters/onelogin.png"/></a>
-               <p>Or have engineering custom-build it</p>
+               <p><small>Or have engineering custom-build it</small></p>
             </section>
 
 
