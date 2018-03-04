@@ -1,0 +1,520 @@
+<!doctype html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+      <title>Docs-as-code tools and workflows</title>
+      <link rel="stylesheet" href="css/reveal.css">
+      <link rel="stylesheet" href="css/theme/black.css">
+      <!-- Theme used for syntax highlighting of code -->
+      <link rel="stylesheet" href="lib/css/zenburn.css">
+      <!-- Printing and PDF exports -->
+      <script>
+         var link = document.createElement( 'link' );
+         link.rel = 'stylesheet';
+         link.type = 'text/css';
+         link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+         document.getElementsByTagName( 'head' )[0].appendChild( link );
+      </script>
+      <style>
+         p.alignLeft {
+         text-align: left;
+         }
+         span.orange, a.orange {
+         color: orange;
+         outline-color: gray;
+         }
+         div.innovation ul li {
+         margin-bottom:12px;
+         }
+         figcaption {
+         font-size:12px;
+         }
+         .reveal p.miscItems, p, li {
+         font-size:.9em;
+         }
+         .slides section h3 {
+         color: orange !important; outline: gray;
+         margin:0px;
+         /*padding-top: 80px;*/
+         font-size: 1.1em;
+         }
+         .slides img {
+         max-width: 80%;
+         max-height: 80%;
+         border:3px solid red;
+         }
+         #upcoming-slide .label {
+         color: #444 !important
+         }
+         ul.credits li {
+         font-size: .6em;
+         }
+         .reveal section h3 {
+         margin:0px;
+         }
+         .reveal section img {
+         margin-bottom:0px;
+         }
+         span.strategy {
+         border: 1px solid #dedede;
+         padding: 4px 6px;
+         border-radius: 8px;
+         }
+         span.myname {
+         font-weight: bold;
+         font-size: 52px;
+         color: #555;
+         font-family: cursive;
+         }
+         .reveal pre code, pre {
+         padding:20px;
+         background-color: #3f3f3f;
+         }
+         .reveal img {
+         background-color: white !important;
+         }
+         .reveal div.imageFit {
+         max-width: 85%;
+         margin-left: auto;
+         margin-right: auto;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="reveal">
+      <div class="slides">
+         <section>
+            <h1>Docs-as-code </h1>
+              <h3>tools and workflows</h3>
+            <div style="margin-bottom:200px;"></div>
+               <small>By Tom Johnson / <a target="_blank" href="http://twitter.com/tomjohnson">@tomjohnson</a><br/>
+            <a target="_blank" href="http://idratherbewriting.com/docs-as-code-tools-and-workflows">http://idratherbewriting.com/docs-as-code-tools-and-workflows</a></small></p>
+            </p>
+         </section>
+         <!-- <section>
+            <h2>Video recording</h2>
+            <p><small>The following is a video recording of this presentation. </small></p>
+            <p><iframe width="640" height="360" src="https://www.youtube.com/embed/gcDSL-8pkvU" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></p>
+            </section> -->
+         <section>
+            <h2>What I'll talk about</h2>
+            <ul>
+               <li>Why docs-as-code is trending</li>
+               <li>Scenarios where docs-as-code works well</li>
+               <li>Common tools and workflows</li>
+               <li>Challenges and pain points in this space</li>
+               <li>Experiences in implementing docs-as-code</li>
+               <li>Best practices and principles</li>
+            </ul>
+         </section>
+         <section>
+            <h2>"Blogging like a hacker"</h2>
+            <blockquote>"On Sunday, October 19th, I sat down in my San Francisco apartment with a glass of apple cider and a clear mind. After a period of reflection, I had an idea. While I'm not specifically trained as an author of prose, I <b>am</b> trained as an author of code. What would happen if I approached blogging from a software development perspective?"<small>&mdash; <a href="http://tom.preston-werner.com/2008/11/17/blogging-like-a-hacker.html">Blogging like a hacker</a>, Tom Preston-Werner, co-founder of Github</small></blockquote>
+         </section>
+         <section>
+            <blockquote>
+               What would happen if we approached <span class="orange">documentation</span> from a software development perspective?
+            </blockquote>
+         </section>
+         <section>
+            <h2>What is docs as code</h2>
+            <img src="media/vectors/docsascode_whatitmeans.svg"/>
+         </section>
+         <section>
+            <h2>Why this started happening</h2>
+            <figure>
+               <img src="media/vectors/docsascode_developersarewriting.svg"/>
+               <figcaption></figcaption>
+            </figure>
+         </section>
+         <section>
+            <h2>Doc sites using Jekyll</h2>
+            <div>
+               <div style="float:left; margin-right: 50px;">
+                  <ul>
+                     <li><a href="http://getbootstrap.com/">Bootstrap</a></li>
+                     <li>
+                        <a href="http://help.beegit.com/">
+                           Beegit
+                     </li>
+                     <li><a href="https://blog.stackoverflow.com/">Stack Overflow blog</a></li>
+                     <li><a href="http://rethinkdb.com/docs/">RethinkDB</a></li>
+                     <li><a href="https://help.github.com/">Github docs</a></li>
+                     <li><a href="http://docs.basekit.com/">Basekit</a></li>
+                     <li><a href="http://jekyllrb.com/docs/home/">Jekyllrb docs</a></li>
+                  </ul>
+               </div>
+               <div style="float:left;">
+                  <ul>
+                     <li><a href="https://sendgrid.com/docs">SendGrid docs</a></li>
+                     <li><a href="https://design.atlassian.com/">Atlassian Design</a></li>
+                     <li><a href="https://docs.cloudcannon.com/">Cloud Cannon docs</a></li>
+                     <li><a href="http://wistia.com/support">Wistia help center</a></li>
+                     <li><a href="https://help.shopify.com/themes/liquid/basics">Liquid (Shopify)</a></li>
+                     <li><a href="http://docs.devo.ps/">devo.ps documentation</a></li>
+                     <li><a href="www.healthcare.gov">healthcare.gov</a></li>
+                  </ul>
+               </div>
+               <div class="clear"></div>
+               <small class="moreDetails"><a target="_blank" href="http://cloudcannon.com/jekyll/2015/06/12/whos-using-jekyll.html">More details &raquo;</a></small>
+            </div>
+         </section>
+         <section>
+            <h2>Demo of how it works</h2>
+         </section>
+         <section>
+            <h2>Getting rid of the database</h2>
+            <figure>
+               <img src="media/vectors/docsascode_static_site_generators.svg"/>
+               <figcaption></figcaption>
+            </figure>
+         </section>
+         <section>
+            <h2>Top static site generators</h2>
+            <figure>
+               <img src="media/rasters/staticgen.png"/>
+               <figcaption></figcaption>
+            </figure>
+         </section>
+         <section>
+            <h2>Common complaints from structured authoring advocates</h2>
+            <ul>
+               <li>No standards</li>
+               <li>No semantics</li>
+               <li>Not robust enough</li>
+               <li>No PDF</li>
+               <li>Poor localization workflow</li>
+            </ul>
+         </section>
+         <section>
+            <section>
+               <h2>Case study I: Implementing docs-as-code at Experian</h2>
+               <figure>
+                  <img src="media/vectors/wtd_doc_navigation_journeytoamazon.svg"/>
+                  <figcaption></figcaption>
+               </figure>
+            </section>
+            <section>
+               <h2>Requirements</h2>
+               <ul>
+                  <li>Move out of Confluence exporting workflow</li>
+                  <li>Publish to modern-looking website</li>
+                  <li>Separate outputs by audience (Java, PHP, C++)</li>
+                  <li>Re-use content across multiple outputs</li>
+                  <li>Maintain versions for each release</li>
+                  <li>Handle authentication via Salesforce</li>
+                  <li>Provide PDF output for pre-sales distribution</li>
+               </ul>
+            </section>
+            <section>
+               <h2>Solutions</h2>
+               <ul>
+                  <li>Use Bootstrap to develop modern-looking theme</li>
+                  <li>Store and manage content in company's VCS</li>
+                  <li>Separate config files for different outputs</li>
+                  <li>Use Prince XML for PDF output</li>
+                  <li>Upload output into Salesforce for authentication</li>
+               </ul>
+            </section>
+            <section>
+               <h2>Regrets</h2>
+               <ul>
+                  <li>Spent a lot of time developing tooling</li>
+                  <li>No continuous delivery implementation</li>
+                  <li>Salesforce authentication required tedious upload</li>
+                  <li>Convenience for business drove tedious doc process</li>
+                  <li>File accumulation exponential with versioning</li>
+                  <li>3rd-party site (Beegit) for content review didn't work</li>
+               </ul>
+            </section>
+         </section>
+         <section>
+         <section>
+            <h2>Case study II: Implementing docs-as-code at Amazon</h2>
+            <figure>
+               <img src="media/vectors/wtd_doc_navigation_journeytoamazon.svg"/>
+               <figcaption></figcaption>
+            </figure>
+         </section>
+         <section>
+            <h2>Requirements</h2>
+            <ul>
+               <li>Publish to old system while also publishing to new</li>
+               <li>Integrate into existing site without header/footer </li>
+               <li>Work with engineering to host content on server</li>
+               <li>Whitelist content for preview with beta partners</li>
+               <li>Make system both simple and robust</li>
+               <li>Enable engineers to author automously</li>
+               <li>Support localization (JA, ZH, DE)</li>
+            </ul>
+         </section>
+         <section>
+            <h2>Solutions</h2>
+            <ul>
+               <li>Develop 2 layouts -- one for old sys, one for new</li>
+               <li>Store links as variables determined by config</li>
+               <li>Use existing Git infrastructure to manage content</li>
+               <li>Involve engineering to build publishing pipeline</li>
+               <li>Group content into two main repos (by team)</li>
+               <li>Develop loc process to output/re-incorporate HTML</li>
+               <li>Built custom scripts to check metadata</li>
+            </ul>
+         </section>
+         <section>
+            <h2>Regrets</h2>
+            <ul>
+               <li>Spent a lot of time developing tooling</li>
+               <li>Didn't build-in support for biz funding for platform</li>
+               <li>Localization workflow cumbersome</li>
+               <li>Two-repo architecture requires manual copy/paste</li>
+               <li>Had to write 25+ pages of internal documentation</li>
+               <li>Jekyll build-time slow; maybe use Hugo instead</li>
+               <li>No fool-proofing against disaster scenarios</li>
+            </ul>
+         </section>
+         <section>
+            <h2>Overall thoughts</h2>
+            <ul>
+               <li>Insist on 3rd-party tooling, hosting, deployment</li>
+               <li>"Build tools yourself on own time" &mdash; not good</li>
+               <li>Engineers don't write much regardless of tooling</li>
+               <li>Keeping it simple means creating complex backend</li>
+               <li>Tools are incredible flexible if you have skillz</li>
+               <li>Momentum of web dev will outpace tech comm tooling</li>
+               <li>Still very early in this space</li>
+            </ul>
+         </section>
+         <section>
+            <h2>The first telephone ~ tin can</h2>
+            <figure>
+               <img src="media/rasters/bellsfirsttelephone.jpg" style="max-height:450px;"/>
+               <figcaption>Bell and an early model of the telephone</figcaption>
+            </figure>
+            <div class="clear"></div>
+            <small class="moreDetails"><a target="_blank" href="http://idratherbewriting.com/2015/02/10/sustaining-and-disruptive-innovations">More details &raquo;</a></small>
+         </section>
+         <section>
+            <h2>Disruptive innovations</h2>
+            <img src="media/vectors/innovation_disruptive.svg"/>
+         </section>
+         <section>
+            <h2>Social coding</h2>
+            <img src="media/vectors/innovation_github.svg"/>
+         </section>
+         <section>
+         <section>
+            <h1>Common challenges/solutions</h1>
+         </section>
+         <section data-background="media/vectors/docslikecode_bg-challenge.svg">
+            <h2>Designing the Site?</h2>
+            <img src="media/vectors/docslikecode_design.svg"/>
+         </section>
+         <section>
+            <h3>Solution: Bootstrap</h3>
+         </section>
+         <section data-background="media/vectors/docslikecode_bg-challenge.svg">
+            <h2>Content re-use?</h2>
+            <img src="media/vectors/docslikecode_contentreuse.svg"/>
+         </section>
+         <section>
+            <h3>Solution: Includes</h3>
+            <p>Store content in <b>_includes</b> folder. Then insert like this:</p>
+            <pre><code data-trim contenteditable>
+{% include myfile.html %}
+</code></pre>
+         </section>
+         <section data-background="media/vectors/docslikecode_bg-challenge.svg">
+            <h2>Conditional filtering?</h2>
+            <img src="media/vectors/docslikecode_conditional_filtering.svg"/>
+         </section>
+         <section>
+            <h3>Solution: Liquid</h3>
+            <pre><code data-trim contenteditable>
+{% if site.audience == "administrators" %}
+show this to administrators
+{% elsif site.audience == "analysts" %}
+show this to analysts
+{% endif %}
+</code></pre>
+         </section>
+         <section data-background="media/vectors/docslikecode_bg-challenge.svg">
+            <h2>Multiple outputs?</h2>
+            <img src="media/vectors/docslikecode_multiple_outputs.svg"/>
+         </section>
+         <section>
+            <h3>Solution: Multiple config files</h3>
+            <p style="text-align: left"><b>Sample build command:</b></p>
+            <pre><code data-trim contenteditable>
+//build administrators output
+jekyll build --config config_administrators.yml --destination ../outputs/admins
+
+//build analysts output
+jekyll build --config config_analysts.yml --destination ../outputs/analysts
+</code></pre>
+         </section>
+         <section data-background="media/vectors/docslikecode_bg-challenge.svg">
+            <h2>Multi-level navigation menu?</h2>
+            <img src="media/vectors/docslikecode_nav_menu.svg"/>
+         </section>
+         <section>
+            <h3>Solution: Separate data from presentation</h3>
+            <ul>
+               <li>Store menu items in YAML file</li>
+               <li>"for" loop in HTML layout parses through YAML</li>
+               <li><a href="https://github.com/tefra/navgoco">Navgoco jQuery</a> component handles other aspects (expand/collapse, cookie, accordion)</li>
+            </ul>
+            <div class="clear"></div>
+         </section>
+         <section>
+         <section data-background="media/vectors/docslikecode_bg-challenge.svg">
+            <h2>Alerts: Notes, tips, cautions?</h2>
+            <img src="media/vectors/docslikecode_notes_tips_alerts.svg"/>
+         </section>
+         <section>
+            <h3>Solution: Includes with Parameters</h3>
+            <pre><code data-trim contenteditable>
+// create the note.html include:
+
+<div><b>Note:</b> {{include.content}}</div>
+
+//use it like this:
+
+{% include note.html content="My note content goes here ..." %}
+</code></pre>
+            <div class="clear"></div>
+            <small class="moreDetails"><a target="_blank" href="http://idratherbewriting.com/documentation-theme-jekyll/mydoc_alerts.html">More details &raquo;</a></small>
+         </section>
+            <section data-background="media/vectors/docslikecode_bg-challenge.svg">
+               <h2>Avoiding broken links?</h2>
+               <img src="media/vectors/docslikecode_links.svg"/>
+            </section>
+            <section>
+               <h3>Solution: YAML-based links</h3>
+               <ul>
+                  <li>Iterate through TOC to create YAML file to get link URLs</li>
+                  <li>Push them into Markdown reference format</li>
+                  <li>Include at the bottom of each file</li>
+               </ul>
+               <div class="clear"></div>
+               <small class="moreDetails"><a target="_blank" href="http://idratherbewriting.com/documentation-theme-jekyll/mydoc_hyperlinks.html/#managed-links">More details &raquo;</a></small>
+            </section>
+            <section data-background="media/vectors/docslikecode_bg-challenge.svg">
+               <h2>PDF output?</h2>
+               <img src="media/vectors/docslikecode_pdf.svg"/>
+            </section>
+            <section>
+               <h3>Solution: Prince XML</h3>
+               <div class="clear"></div>
+               <small class="moreDetails"><a target="_blank" href="http://idratherbewriting.com/documentation-theme-jekyll/mydoc_generating_pdfs.html">More details &raquo;</a></small>
+            </section>
+            <section data-background="media/vectors/docslikecode_bg-challenge.svg">
+               <h2>Re-use across projects?</h2>
+               <img src="media/vectors/docslikecode_cross_projects.svg"/>
+            </section>
+            <section>
+               <h3>Solution: Single project for writers</h3>
+               <div class="clear"></div>
+               <small class="moreDetails"><a target="_blank" href="http://idratherbewriting.com/documentation-theme-jekyll/mydoc_content_reuse.html">More details &raquo;</a></small>
+            </section>
+            <section data-background="media/vectors/docslikecode_bg-challenge.svg">
+               <h2>Version control workflows?</h2>
+               <img src="media/vectors/docslikecode_git.svg"/>
+            </section>
+            <section>
+               <h3>Solution: Learn the needed workflow </h3>
+               <ul>
+                  <li>Focus only on necessary Git commands</li>
+                  <li>Coordinate more among team members</li>
+                  <li>Avoid simultaneously editing the same page</li>
+                  <li>Look regularly at commit logs</li>
+               </ul>
+            </section>
+            <section data-background="media/vectors/docslikecode_bg-challenge.svg">
+               <h2>Simplicity?</h2>
+               <img src="media/vectors/docslikecode_simplicity.svg"/>
+            </section>
+            <section>
+               <h3>Solution: Stick with Core Jekyll</h3>
+            </section>
+            <section data-background="media/vectors/docslikecode_bg-challenge.svg">
+               <h2>Search?</h2>
+               <img src="media/vectors/docslikecode_search.svg"/>
+            </section>
+            <section>
+               <h3>Solution: <a href="https://swiftype.com">Swiftype</a> or <a href="https://www.algolia.com">Algolia</a></h3>
+            </section>
+            <section data-background="media/vectors/docslikecode_bg-challenge.svg">
+               <h2>Translation?</h2>
+               <img src="media/vectors/docslikecode_translation.svg"/>
+            </section>
+            <section>
+               <h3>Solution: Separate projects</h3>
+            </section>
+            <section data-background="media/vectors/docslikecode_bg-challenge.svg">
+               <h2>Authentication?</h2>
+               <img src="media/vectors/docslikecode_authentication.svg"/>
+            </section>
+            <section>
+               <h3>Solution: Involve Engineering</h3>
+            </section>
+            <section>
+               <h2>How Jekyll makes me feel</h2>
+               <img src="media/vectors/docslikecode_howitmakesmefeel.svg"/>
+            </section>
+            <section>
+               <h2>Documentation theme <br/>for Jekyll</h2>
+               <div>
+                  <div style="float: right; max-width: 400px;">
+                     <a href="https://github.com/tomjoht/documentation-theme-jekyll"><img src="images/themesnapshot.png"/></a>
+                  </div>
+                  <div style="max-width: 50%">
+                     <ul>
+                        <li>Newer theme: Single output, multiple sidebars (<a target="_blank" href="https://github.com/tomjoht/documentation-theme-jekyll">Github repo</a>)</li>
+                        <li style="margin-top:20px;">Older theme: Multiple outputs, one sidebar (<a target="_blank" href="https://github.com/tomjoht/jekylldoctheme-separate-outputs">Github repo</a>)</li>
+                     </ul>
+                  </div>
+               </div>
+            </section>
+         </section>
+         <section>
+            <h2>Questions?</h2>
+            <img src="media/vectors/questions-01.svg"/>
+         </section>
+         <section>
+            <h1>The end</h1>
+            <div>
+               <div style="float:left; padding: 10px;">
+                  <img src="http://idratherbewriting.com/learnapidoc/images/tomjohnson.jpg"/>
+               </div>
+               <div style="float:left; padding: 10px; text-align: left;">
+                  <p><span class="myname">Tom Johnson</span><br/>
+                     &mdash; <a target="_blank" href="http://idratherbewriting.com">idratherbewriting.com</a><br/>
+                     &mdash;  <a target="_blank" href="http://twitter.com/tomjohnson">@tomjohnson</a><br />
+                     &mdash; <a target="_blank" href="mailto:tom@idratherbewriting.com">tom@idratherbewriting.com</a>
+                  </p>
+               </div>
+         </section>
+         </div>
+      </div>
+      <script src="lib/js/head.min.js"></script>
+      <script src="js/reveal.js"></script>
+      <script>
+         // More info about config & dependencies:
+         // - https://github.com/hakimel/reveal.js#configuration
+         // - https://github.com/hakimel/reveal.js#dependencies
+            Reveal.initialize({
+              history: true,
+              center: false,
+              progress: true,
+              slideNumber: true,
+         	dependencies: [
+         		{ src: 'plugin/markdown/marked.js' },
+         		{ src: 'plugin/markdown/markdown.js' },
+         		{ src: 'plugin/notes/notes.js', async: true },
+         		{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+         	]
+         });
+      </script>
+   </body>
+</html>
