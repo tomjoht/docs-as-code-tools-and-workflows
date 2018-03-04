@@ -87,9 +87,9 @@
          <section>
             <h1>Docs-as-code </h1>
               <h3>tools and workflows</h3>
-            <div style="margin-bottom:200px;"></div>
+            <img src="media/vectors/docsascode_titleslide.svg" style="max-width: 500px"/>
                <small>By Tom Johnson / <a target="_blank" href="http://twitter.com/tomjohnson">@tomjohnson</a><br/>
-            <a target="_blank" href="http://idratherbewriting.com/docs-as-code-tools-and-workflows">http://idratherbewriting.com/docs-as-code-tools-and-workflows</a></small></p>
+            Slides: <a target="_blank" href="http://idratherbewriting.com/docs-as-code-tools-and-workflows">http://idratherbewriting.com/docs-as-code-tools-and-workflows</a></small></p>
             </p>
          </section>
          <!-- <section>
@@ -105,7 +105,7 @@
                <li>Common tools and workflows</li>
                <li>Challenges and pain points in this space</li>
                <li>Experiences in implementing docs-as-code</li>
-               <li>Best practices and principles</li>
+               <li>Reflections on maturity and momentum</li>
             </ul>
          </section>
          <section>
@@ -114,12 +114,35 @@
          </section>
          <section>
             <blockquote>
-               What would happen if we approached <span class="orange">documentation</span> from a software development perspective?
+               What would happen if we approached <span class="orange">software documentation</span> from a software development perspective?
             </blockquote>
          </section>
          <section>
+            <h2>Getting rid of the database</h2>
+            <figure>
+               <img src="media/vectors/docsascode_static_site_generators.svg"/>
+               <figcaption></figcaption>
+            </figure>
+         </section>
+         <section>
             <h2>What is docs as code</h2>
-            <img src="media/vectors/docsascode_whatitmeans.svg"/>
+            <img src="media/vectors/docsascode_titleslide.svg" style="max-height: 300px;"/>
+            <div>
+              <div style="float: left; padding: 10px; max-width: 50%">
+              <ul>
+                <li>Plain text files (.md)</li>
+                <li>Static site generators</li>
+                <li>Text editors (Atom)</li>
+              </ul>
+            </div>
+            <div style="float: left; padding: 10px; max-width: 50%">
+              <ul>
+                <li>Git for file mgmt/collab.</li>
+                <li>Continuous publishing</li>
+                <li>Validation scripts</li>
+              </ul>
+            </div>
+          </div>
          </section>
          <section>
             <h2>Why this started happening</h2>
@@ -129,7 +152,7 @@
             </figure>
          </section>
          <section>
-            <h2>Doc sites using Jekyll</h2>
+            <h2>Doc sites built using docs-as-code</h2>
             <div>
                <div style="float:left; margin-right: 50px;">
                   <ul>
@@ -162,14 +185,9 @@
          </section>
          <section>
             <h2>Demo of how it works</h2>
+            &lt; exit slides &gt;
          </section>
-         <section>
-            <h2>Getting rid of the database</h2>
-            <figure>
-               <img src="media/vectors/docsascode_static_site_generators.svg"/>
-               <figcaption></figcaption>
-            </figure>
-         </section>
+
          <section>
             <h2>Top static site generators</h2>
             <figure>
@@ -178,7 +196,7 @@
             </figure>
          </section>
          <section>
-            <h2>Common complaints from structured authoring advocates</h2>
+            <h2>Complaints from DITA people</h2>
             <ul>
                <li>No standards</li>
                <li>No semantics</li>
@@ -218,6 +236,10 @@
                </ul>
             </section>
             <section>
+              <h2>Jekyll doc theme I built</h2>
+              <a href="http://idratherbewriting.com/documentation-theme-jekyll/"><img src="media/rasters/jekylldoctheme.png"/></a>
+            </section>
+            <section>
                <h2>Regrets</h2>
                <ul>
                   <li>Spent a lot of time developing tooling</li>
@@ -242,7 +264,7 @@
             <ul>
                <li>Publish to old system while also publishing to new</li>
                <li>Integrate into existing site without header/footer </li>
-               <li>Work with engineering to host content on server</li>
+               <li>Go through engineering to publish to tier 1 server</li>
                <li>Whitelist content for preview with beta partners</li>
                <li>Make system both simple and robust</li>
                <li>Enable engineers to author automously</li>
@@ -261,6 +283,11 @@
                <li>Built custom scripts to check metadata</li>
             </ul>
          </section>
+
+         <section>
+           <h2>Solution for Appstore docs</h2>
+           <a href="https://developer.amazon.com/docs/fire-tv/getting-started-developing-apps-and-games.html"><img src="media/rasters/amazondevportal.png"/></a>
+         </section>
          <section>
             <h2>Regrets</h2>
             <ul>
@@ -273,15 +300,18 @@
                <li>No fool-proofing against disaster scenarios</li>
             </ul>
          </section>
+       </section>
          <section>
             <h2>Overall thoughts</h2>
             <ul>
                <li>Insist on 3rd-party tooling, hosting, deployment</li>
-               <li>"Build tools yourself on own time" &mdash; not good</li>
+               <li>"Build tools yourself on own time" == not good</li>
                <li>Engineers don't write much regardless of tooling</li>
                <li>Keeping it simple means creating complex backend</li>
                <li>Tools are incredible flexible if you have skillz</li>
-               <li>Momentum of web dev will outpace tech comm tooling</li>
+               <li>Solutions for search, localization, and PDF are hacks</li>
+               <li>Web dev will outpace tech comm tooling</li>
+               <li>Freedom to code the exact solution you want</li>
                <li>Still very early in this space</li>
             </ul>
          </section>
@@ -299,34 +329,47 @@
             <img src="media/vectors/innovation_disruptive.svg"/>
          </section>
          <section>
-            <h2>Social coding</h2>
+            <h2>Social coding is empowering</h2>
             <img src="media/vectors/innovation_github.svg"/>
          </section>
+       </section>
          <section>
-         <section>
-            <h1>Common challenges/solutions</h1>
+            <h2>Discussion / questions</h2>
+            <img src="media/vectors/questions-01.svg"/>
          </section>
-         <section data-background="media/vectors/docslikecode_bg-challenge.svg">
+         <section>
+            <h2>Challenges & solutions</h2>
+            <img src="media/vectors/docsascode_journey.svg"/>
+
+         </section>
+         <section data-background="media/vectors/docsascode_bg-challenge.svg">
             <h2>Designing the Site?</h2>
-            <img src="media/vectors/docslikecode_design.svg"/>
+            <img src="media/vectors/docsascode_design.svg"/>
          </section>
          <section>
             <h3>Solution: Bootstrap</h3>
+            <img src="media/rasters/bootstrap.png"/>
+            <p>Or have your UX team build it</p>
          </section>
-         <section data-background="media/vectors/docslikecode_bg-challenge.svg">
+         <section data-background="media/vectors/docsascode_bg-challenge.svg">
             <h2>Content re-use?</h2>
-            <img src="media/vectors/docslikecode_contentreuse.svg"/>
+            <img src="media/vectors/docsascode_content_reuse.svg"/>
          </section>
          <section>
-            <h3>Solution: Includes</h3>
+            <h3>Solution: One project, with includes</h3>
             <p>Store content in <b>_includes</b> folder. Then insert like this:</p>
-            <pre><code data-trim contenteditable>
+<pre><code data-trim contenteditable>
 {% include myfile.html %}
 </code></pre>
+<p>Or with parameters:</p>
+<pre><code data-trim contenteditable>
+{% include myfile.html audience="java-developers" %}
+</code></pre>
+
          </section>
-         <section data-background="media/vectors/docslikecode_bg-challenge.svg">
+         <section data-background="media/vectors/docsascode_bg-challenge.svg">
             <h2>Conditional filtering?</h2>
-            <img src="media/vectors/docslikecode_conditional_filtering.svg"/>
+            <img src="media/vectors/docsascode_conditional_filtering.svg"/>
          </section>
          <section>
             <h3>Solution: Liquid</h3>
@@ -338,9 +381,9 @@ show this to analysts
 {% endif %}
 </code></pre>
          </section>
-         <section data-background="media/vectors/docslikecode_bg-challenge.svg">
+         <section data-background="media/vectors/docsascode_bg-challenge.svg">
             <h2>Multiple outputs?</h2>
-            <img src="media/vectors/docslikecode_multiple_outputs.svg"/>
+            <img src="media/vectors/docsascode_multiple_outputs.svg"/>
          </section>
          <section>
             <h3>Solution: Multiple config files</h3>
@@ -353,134 +396,115 @@ jekyll build --config config_administrators.yml --destination ../outputs/admins
 jekyll build --config config_analysts.yml --destination ../outputs/analysts
 </code></pre>
          </section>
-         <section data-background="media/vectors/docslikecode_bg-challenge.svg">
-            <h2>Multi-level navigation menu?</h2>
-            <img src="media/vectors/docslikecode_nav_menu.svg"/>
+         <section data-background="media/vectors/docsascode_bg-challenge.svg">
+            <h2>Multi-level nav menu?</h2>
+            <img src="media/vectors/docsascode_nav_menu.svg"/>
          </section>
          <section>
-            <h3>Solution: Separate data from presentation</h3>
-            <ul>
-               <li>Store menu items in YAML file</li>
-               <li>"for" loop in HTML layout parses through YAML</li>
-               <li><a href="https://github.com/tefra/navgoco">Navgoco jQuery</a> component handles other aspects (expand/collapse, cookie, accordion)</li>
+            <h3>Solution: YAML data file</h3>
+<pre><code data-trim contenteditable>
+- title: Overview
+  output: web, pdf
+  folderitems:
+
+  - title: Get started
+    url: /index.html
+    output: web, pdf
+    type: homepage
+
+  - title: Introduction
+    url: /mydoc_introduction.html
+    output: web, pdf
+
+  - title: Supported features
+    url: /mydoc_supported_features.html
+    output: web, pdf
+</code></pre>
+
+<p>And <a href="https://github.com/tefra/navgoco">Navgoco jQuery component</a></p>
             </ul>
             <div class="clear"></div>
          </section>
-         <section>
-         <section data-background="media/vectors/docslikecode_bg-challenge.svg">
-            <h2>Alerts: Notes, tips, cautions?</h2>
-            <img src="media/vectors/docslikecode_notes_tips_alerts.svg"/>
+         <section data-background="media/vectors/docsascode_bg-challenge.svg">
+            <h2>Notes, tips, cautions?</h2>
+            <img src="media/vectors/docsascode_notes_tips_alerts.svg"/>
          </section>
          <section>
             <h3>Solution: Includes with Parameters</h3>
+            <p>Create the note.html include:</p>
             <pre><code data-trim contenteditable>
-// create the note.html include:
-
 <div><b>Note:</b> {{include.content}}</div>
-
-//use it like this:
-
-{% include note.html content="My note content goes here ..." %}
 </code></pre>
-            <div class="clear"></div>
-            <small class="moreDetails"><a target="_blank" href="http://idratherbewriting.com/documentation-theme-jekyll/mydoc_alerts.html">More details &raquo;</a></small>
+
+<p>Use it like this:</p>
+<pre><code data-trim contenteditable>
+{% include note.html content="Note content here ..." %}
+</code></pre>
          </section>
-            <section data-background="media/vectors/docslikecode_bg-challenge.svg">
+
+            <section data-background="media/vectors/docsascode_bg-challenge.svg">
                <h2>Avoiding broken links?</h2>
-               <img src="media/vectors/docslikecode_links.svg"/>
+               <img src="media/vectors/docsascode_links.svg"/>
             </section>
             <section>
-               <h3>Solution: YAML-based links</h3>
-               <ul>
-                  <li>Iterate through TOC to create YAML file to get link URLs</li>
-                  <li>Push them into Markdown reference format</li>
-                  <li>Include at the bottom of each file</li>
-               </ul>
-               <div class="clear"></div>
-               <small class="moreDetails"><a target="_blank" href="http://idratherbewriting.com/documentation-theme-jekyll/mydoc_hyperlinks.html/#managed-links">More details &raquo;</a></small>
+               <h3>Solution: Validate via scripts</h3>
+               <img src="media/vectors/docsascode_pythonscript.svg"/>
+
             </section>
-            <section data-background="media/vectors/docslikecode_bg-challenge.svg">
+            <section data-background="media/vectors/docsascode_bg-challenge.svg">
                <h2>PDF output?</h2>
-               <img src="media/vectors/docslikecode_pdf.svg"/>
+               <img src="media/vectors/docsascode_pdf.svg"/>
             </section>
             <section>
                <h3>Solution: Prince XML</h3>
-               <div class="clear"></div>
-               <small class="moreDetails"><a target="_blank" href="http://idratherbewriting.com/documentation-theme-jekyll/mydoc_generating_pdfs.html">More details &raquo;</a></small>
+               <img src="media/rasters/princexml.png"/>
+               <p>Or live without it.</p>
+
             </section>
-            <section data-background="media/vectors/docslikecode_bg-challenge.svg">
-               <h2>Re-use across projects?</h2>
-               <img src="media/vectors/docslikecode_cross_projects.svg"/>
-            </section>
-            <section>
-               <h3>Solution: Single project for writers</h3>
-               <div class="clear"></div>
-               <small class="moreDetails"><a target="_blank" href="http://idratherbewriting.com/documentation-theme-jekyll/mydoc_content_reuse.html">More details &raquo;</a></small>
-            </section>
-            <section data-background="media/vectors/docslikecode_bg-challenge.svg">
+            <section data-background="media/vectors/docsascode_bg-challenge.svg">
                <h2>Version control workflows?</h2>
-               <img src="media/vectors/docslikecode_git.svg"/>
+               <img src="media/vectors/docsascode_git.svg"/>
             </section>
             <section>
-               <h3>Solution: Learn the needed workflow </h3>
-               <ul>
-                  <li>Focus only on necessary Git commands</li>
-                  <li>Coordinate more among team members</li>
-                  <li>Avoid simultaneously editing the same page</li>
-                  <li>Look regularly at commit logs</li>
-               </ul>
+               <h3>Solution: Keep processes simple </h3>
+               <img src="media/vectors/docsascode_simplicity.svg"/>
+
+
             </section>
-            <section data-background="media/vectors/docslikecode_bg-challenge.svg">
-               <h2>Simplicity?</h2>
-               <img src="media/vectors/docslikecode_simplicity.svg"/>
-            </section>
-            <section>
-               <h3>Solution: Stick with Core Jekyll</h3>
-            </section>
-            <section data-background="media/vectors/docslikecode_bg-challenge.svg">
+            <section data-background="media/vectors/docsascode_bg-challenge.svg">
                <h2>Search?</h2>
-               <img src="media/vectors/docslikecode_search.svg"/>
+               <img src="media/vectors/docsascode_search.svg"/>
             </section>
             <section>
-               <h3>Solution: <a href="https://swiftype.com">Swiftype</a> or <a href="https://www.algolia.com">Algolia</a></h3>
+               <h3>Solution: 3rd-party service</h3>
+               <a href="https://www.algolia.com"><img src="media/rasters/algolia.png"/></a>
+               <p>Or have engineering custom-build it</p>
             </section>
-            <section data-background="media/vectors/docslikecode_bg-challenge.svg">
+            <section data-background="media/vectors/docsascode_bg-challenge.svg">
                <h2>Translation?</h2>
-               <img src="media/vectors/docslikecode_translation.svg"/>
+               <img src="media/vectors/docsascode_translation.svg"/>
             </section>
             <section>
-               <h3>Solution: Separate projects</h3>
+               <h3>Containers for HTML</h3>
+               <img src="media/vectors/docsascode_locsolution.svg"/>
+
+
             </section>
-            <section data-background="media/vectors/docslikecode_bg-challenge.svg">
+            <section data-background="media/vectors/docsascode_bg-challenge.svg">
                <h2>Authentication?</h2>
-               <img src="media/vectors/docslikecode_authentication.svg"/>
+               <img src="media/vectors/docsascode_authentication.svg"/>
             </section>
             <section>
-               <h3>Solution: Involve Engineering</h3>
+               <h3>Solution: 3rd-party service</h3>
+               <a href="https://www.onelogin.com/"><img src="media/rasters/onelogin.png"/></a>
+               <p>Or have engineering custom-build it</p>
             </section>
-            <section>
-               <h2>How Jekyll makes me feel</h2>
-               <img src="media/vectors/docslikecode_howitmakesmefeel.svg"/>
-            </section>
-            <section>
-               <h2>Documentation theme <br/>for Jekyll</h2>
-               <div>
-                  <div style="float: right; max-width: 400px;">
-                     <a href="https://github.com/tomjoht/documentation-theme-jekyll"><img src="images/themesnapshot.png"/></a>
-                  </div>
-                  <div style="max-width: 50%">
-                     <ul>
-                        <li>Newer theme: Single output, multiple sidebars (<a target="_blank" href="https://github.com/tomjoht/documentation-theme-jekyll">Github repo</a>)</li>
-                        <li style="margin-top:20px;">Older theme: Multiple outputs, one sidebar (<a target="_blank" href="https://github.com/tomjoht/jekylldoctheme-separate-outputs">Github repo</a>)</li>
-                     </ul>
-                  </div>
-               </div>
-            </section>
-         </section>
-         <section>
-            <h2>Questions?</h2>
-            <img src="media/vectors/questions-01.svg"/>
-         </section>
+
+
+<section>
+  <h2>Your docs-as-code journey?</h2>
+  <img src="media/vectors/docsascode_journey.svg"/>
+</section>
          <section>
             <h1>The end</h1>
             <div>
