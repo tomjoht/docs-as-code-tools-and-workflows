@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 17.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 229.9 595.3 384" enable-background="new 0 229.9 595.3 384" xml:space="preserve">
+<line fill="none" stroke="#FF0000" stroke-width="4" stroke-miterlimit="10" x1="59.7" y1="413.9" x2="532.6" y2="320.1"/>
+<line fill="none" stroke="#FF0000" stroke-width="4" stroke-miterlimit="10" x1="59.7" y1="544.7" x2="532.6" y2="445.2"/>
+<text transform="matrix(1 0 0 1 0 238.1703)" font-family="'ArialMT'" font-size="9.3134"> </text>
+<g>
+	<g>
+		<line fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" x1="59.8" y1="573.5" x2="59.8" y2="270.8"/>
+		<g>
+			<polygon points="59.7,254.5 69.2,277.7 59.7,272.2 50.2,277.7 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line fill="none" stroke="#000000" stroke-width="4" stroke-miterlimit="10" x1="59" y1="573.5" x2="515.3" y2="573.5"/>
+		<g>
+			<polygon points="531.9,573.3 508.7,582.8 514.2,573.3 508.7,563.8 			"/>
+		</g>
+	</g>
+</g>
+<text transform="matrix(0.9833 -0.1821 0.1821 0.9833 84.5762 401.9114)" fill="#7C7B7B" font-family="'ArialMT'" font-size="12">Performance demanded at high end of market</text>
+<text transform="matrix(0.9782 -0.2075 0.2075 0.9782 92.2494 531.8331)" fill="#7C7B7B" font-family="'ArialMT'" font-size="12">Performance demanded at low end of market</text>
+<text transform="matrix(1 0 0 1 40.2148 343.0594)" font-family="'Arial-BoldMT'" font-size="16" glyph-orientation-vertical="0" writing-mode="tb">Performance</text>
+<g>
+	<text transform="matrix(1 0 0 1 130.164 597.2231)" font-family="'Arial-BoldMT'" font-size="16">Time</text>
+</g>
+</svg>
